@@ -1,10 +1,10 @@
-export default {
+module.exports = {
   env: {
     browser: true,
     es6: true,
     node: true
   },
-  extends: ['google', 'plugin:prettier/recommended'],
+  extends: ['plugin:prettier/recommended'], // 'google'
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'

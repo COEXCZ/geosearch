@@ -74,4 +74,8 @@ export interface GeocoderError extends Error {
   axiosResponse?: AxiosResponse;
 }
 
+export enum GeocodingCountryBounds {
+  cz = '48.5370786,12.0921668|51.0746358,18.8927040',
+}
+
 export type GeocodingScope = 'muni';
