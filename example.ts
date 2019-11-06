@@ -4,4 +4,4 @@ const mapycz = new MapyCz();
 
 mapycz
   .geoocode('Mirošov', { scope: 'muni' })
-  .then(data => console.log('Results async', data.data));
+  .then(data => console.log('Results async', data.data.result));

@@ -1,15 +1,16 @@
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import { API_URL, COUNT } from './variables';
+import { GeocodingData, GeocodingOptions } from './geo.interface';
 
 export class MapyCz {
-  private options?: any;
+  private options?: GeocodingOptions;
 
   constructor() {}
 
   async geoocode(
     query: string,
-    options?: any | undefined
-  ): Promise<any> {
+    options?: GeocodingOptions | undefined
+  ): Promise<AxiosResponse<GeocodingData>> {
     this.options = options;
     return axios.get(`${API_URL}?count=${COUNT}&phrase=${encodeURIComponent(query)}`);
   }
