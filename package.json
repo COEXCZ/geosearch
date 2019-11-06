@@ -4,13 +4,10 @@
   "description": "Mapy cz",
   "main": "index.js",
   "scripts": {
+    "start": "tsc -w",
     "build": "tsc",
-    "gts": "gts",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "tsc -p .",
-    "prepare": "yarn run compile",
-    "pretest": "yarn run compile",
-    "posttest": "yarn run check"
+    "example": "node dist/example",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -30,5 +27,8 @@
   "devDependencies": {
     "@types/node": "^12.12.6",
     "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "axios": "^0.19.0"
   }
 }
