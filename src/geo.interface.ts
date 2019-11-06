@@ -33,7 +33,7 @@ export interface GeocodingUserData {
 }
 
 export interface GeocodingResult {
-  category: string;
+  category: GeocodingScope | undefined;
   highlight: number[];
   sentence: string;
   userData: GeocodingUserData;

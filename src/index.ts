@@ -1,17 +1,39 @@
 import axios, { AxiosResponse } from 'axios';
 import { API_URL, COUNT } from './variables';
-import { GeocodingData, GeocodingOptions } from './geo.interface';
+import { GeocodingData, GeocodingOptions, GeocodingScope, GeocodingResult } from './geo.interface';
 
 export class MapyCz {
-  private options?: GeocodingOptions;
+  private options?: GeocodingOptions | undefined;
 
   constructor() {}
 
-  async geoocode(
+  public async geoocode(
     query: string,
     options?: GeocodingOptions | undefined
-  ): Promise<AxiosResponse<GeocodingData>> {
+  ): Promise<GeocodingResult[]> {
     this.options = options;
-    return axios.get(`${API_URL}?count=${COUNT}&phrase=${encodeURIComponent(query)}`);
+    return axios.get<GeocodingData>(`${API_URL}?count=${COUNT}&phrase=${encodeURIComponent(query)}`)
+      .then(results => results.data)
+      // Filter scope
+      .then(results => this.filterData(results.result, options))
+  }
+
+  private filterData(data: GeocodingResult[], options: GeocodingOptions | undefined): GeocodingResult[] {
+    if (options?.scope) {
+      let category = this.preparCategoryForFilter(options.scope);
+      return data
+        .filter((item) => (item.category === category))
+        .filter((item) => item.userData.source === 'muni');
+    } else {
+      return data;
+    }
+  }
+
+  private preparCategoryForFilter(scope: GeocodingScope): string | undefined {
+    let category;
+    if (scope === 'muni') {
+      category = 'municipality_cz';
+    }
+    return category;
   }
 }
