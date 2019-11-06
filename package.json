@@ -1,0 +1,24 @@
+{
+  "name": "mapycz",
+  "version": "0.0.1",
+  "description": "Mapy cz",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coex/mapycz.git"
+  },
+  "keywords": [
+    "mapycz",
+    "maps",
+    "mapy"
+  ],
+  "author": "COEX",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coex/mapycz/issues"
+  },
+  "homepage": "https://github.com/coex/mapycz#readme"
+}
