@@ -12,7 +12,12 @@ export class MapyCz {
     options?: GeocodingOptions | undefined
   ): Promise<GeocodingResult[]> {
     this.options = options;
-    return axios.get<GeocodingData>(`${API_URL}?count=${COUNT}&phrase=${encodeURIComponent(query)}`)
+
+    let bounds = this.getBounds(options);
+
+    return axios.get<GeocodingData>(
+      `${API_URL}?count=${COUNT}&phrase=${encodeURIComponent(query)}${bounds}`
+      )
       .then(results => results.data)
       // Filter scope
       .then(results => this.filterData(results.result, options))
@@ -29,6 +34,13 @@ export class MapyCz {
     }
   }
 
+  private getBounds(options: GeocodingOptions | undefined): string | undefined {
+    let bounds;
+    if (options?.country || options?.bounds) {
+      bounds = `&bounds=${options.country ? encodeURIComponent(options.country) : options.bounds}`;
+    }
+    return bounds;
+  }
   // private preparCategoryForFilter(scope: GeocodingScope): string | undefined {
   //   let category;
   //   if (scope === 'muni') {
