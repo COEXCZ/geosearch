@@ -1,0 +1,61 @@
+{
+  "deletedFromBack": 0,
+  "hasGeo": 0,
+  "hasService": 0,
+  "id": "09a289e9-dd61-4f82-ba87-98a0d4fcc331",
+  "result": [
+    {
+      "category": "municipality_osm",
+      "highlight": [],
+      "sentence": "",
+      "userData": {
+        "bbox": [
+          51.286758422851562,
+          -0.51037514209747314,
+          51.691875457763672,
+          0.33401545882225037
+        ],
+        "country": "",
+        "district": "",
+        "elasticWeight": 0,
+        "evidenceNumber": "",
+        "highlight": [
+          0,
+          6
+        ],
+        "highlightSecond": [
+          13,
+          19
+        ],
+        "houseNumber": "",
+        "iconType": "geo",
+        "id": 1631,
+        "img": "",
+        "importance": 0.86562595599908199,
+        "latitude": 51.507321846272198,
+        "longitude": -0.127647458102842,
+        "mmid": "",
+        "mmsource": "",
+        "mmtype": "",
+        "muniId": "",
+        "municipality": "",
+        "nuts": "",
+        "poiType": "",
+        "poiTypeId": 0,
+        "popularity": 0.71399999999999997,
+        "premiseIds": [],
+        "quarter": "",
+        "region": "",
+        "source": "osm",
+        "street": "",
+        "streetNumber": "",
+        "suggestFirstRow": "Londýn",
+        "suggestSecondRow": "region Velký Londýn, Spojené království",
+        "suggestThirdRow": "Hlavní město",
+        "ward": "",
+        "wikiId": "Q84",
+        "zipCode": ""
+      }
+    }
+  ]
+}
