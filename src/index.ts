@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { API_URL } from './variables';
+import { API_URL, COUNT } from './variables';
 
 export class MapyCz {
   private options?: any;
@@ -11,6 +11,6 @@ export class MapyCz {
     options?: any | undefined
   ): Promise<any> {
     this.options = options;
-    return axios.get(`${API_URL}?count=5&phrase=${encodeURIComponent(query)}`);
+    return axios.get(`${API_URL}?count=${COUNT}&phrase=${encodeURIComponent(query)}`);
   }
 }
