@@ -9,6 +9,9 @@
     "example": "node dist/example",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "axios": "^0.19.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/coex/mapycz.git"
@@ -28,7 +31,5 @@
     "@types/node": "^12.12.6",
     "typescript": "^3.7.2"
   },
-  "dependencies": {
-    "axios": "^0.19.0"
-  }
+  "files": ["dist/**/*", "index.js"]
 }
