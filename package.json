@@ -4,6 +4,7 @@
   "description": "Mapy cz",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/coex/mapycz/issues"
   },
-  "homepage": "https://github.com/coex/mapycz#readme"
+  "homepage": "https://github.com/coex/mapycz#readme",
+  "devDependencies": {
+    "typescript": "^3.7.2"
+  }
 }
