@@ -25,7 +25,7 @@ class MapyCz {
   }
 
   private filterData(data: GeocodingResult[], options: GeocodingOptions | undefined): GeocodingResult[] {
-    if (options?.scope) {
+    if (options && options.scope) {
       return data
         .filter((item) => String(item.category).includes(String(options.scope)))
         .filter((item) => item.userData.source === options.scope);
