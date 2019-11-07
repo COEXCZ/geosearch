@@ -17,10 +17,20 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
-  plugins: ['@typescript-eslint', 'prettier'],
+  plugins: [
+    '@typescript-eslint',
+    'prettier'
+  ],
   rules: {
-    'require-jsdoc': 'off', // disable googles JSDoc
-    'no-unused-vars': 'warn', // change error log to warn
+    // disable googles JSDoc
+    'require-jsdoc': 'off',
+    // no-unused vars for typescript config
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': ['error', {
+      'vars': 'all',
+      'args': 'after-used',
+      'ignoreRestSiblings': false
+    }],
     'prettier/prettier': 'error'
   }
 }
