@@ -1,8 +1,6 @@
-import { MapyCz } from './index';
+import { Mapy } from './index';
 import { GeocodingCountryBounds } from './src/geo.interface';
 
-const mapycz = new MapyCz();
-
-mapycz
+Mapy
   .geoocode('Praha', { scope: 'muni', country: GeocodingCountryBounds.cz })
   .then(data => console.log('Results async', data));

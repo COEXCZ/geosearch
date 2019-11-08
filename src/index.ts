@@ -3,7 +3,7 @@ import { API_URL, COUNT } from './variables';
 import { GeocodingData, GeocodingOptions, GeocodingScope, GeocodingResult } from './geo.interface';
 import { getBounds } from './utils';
 
-export class MapyCz {
+class MapyCz {
   constructor() {}
 
   public async geoocode(
@@ -32,3 +32,5 @@ export class MapyCz {
   }
 
 }
+
+export const Mapy = new MapyCz();
