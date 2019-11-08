@@ -1,6 +1,12 @@
-import { Mapy } from './index';
-import { GeocodingCountryBounds } from './src/geo.interface';
+import { Mapy } from "./index";
 
-Mapy
-  .geoocode('Praha', { scope: 'muni', country: GeocodingCountryBounds.cz })
-  .then(data => console.log('Results async', data));
+const bounds: any = { sw: null };
+
+Mapy.geoocode("Praha", {
+  scope: "muni",
+  bounds: bounds
+})
+  .then(data => console.log("Results async", data))
+  .catch(e => {
+    console.log("users catch", e);
+  });

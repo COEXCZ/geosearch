@@ -1,27 +1,50 @@
-import axios from 'axios';
-import { API_URL, COUNT } from './variables';
-import { GeocodingData, GeocodingOptions, GeocodingScope, GeocodingResult } from './geo.interface';
-import { getBounds } from './utils';
+import axios, { AxiosError } from "axios";
+import { GeocodingData, GeocodingOptions, GeocodingResult } from "./geo.interface";
+import { createError, getBounds } from "./utils";
+import { API_URL, COUNT } from "./variables";
 
 class MapyCz {
   constructor() {}
 
-  public async geoocode(
+  public geoocode(
     query: string,
-    options?: GeocodingOptions | undefined
+    options?: GeocodingOptions
   ): Promise<GeocodingResult[]> {
-
-    let bounds = getBounds(options);
-
-    return axios.get<GeocodingData>(
-      `${API_URL}?count=${COUNT}&phrase=${encodeURIComponent(query)}${bounds}`
+    return getBounds(options)
+      .then(
+        bounds => {
+          return axios
+            .get<GeocodingData>(
+              `${API_URL}?count=${COUNT}&phrase=${encodeURIComponent(
+                query
+              )}${bounds}`
+            )
+            .then(
+              response => {
+                if (response.statusText === "OK" || response.status === 200) {
+                  return this.filterData(response.data.result, options);
+                }
+                throw createError("API request failed", response);
+              },
+              (axiosError: AxiosError) => {
+                if(!axiosError.response) {
+                  throw createError("Network Error", axiosError.response, axiosError);
+                }
+                throw createError("API request failed", axiosError.response, axiosError);
+              }
+            );
+        },
+        () => {
+          // getBounds error
+          throw createError("Input Error");
+        }
       )
-      .then(results => results.data)
-      // Filter scope
-      .then(results => this.filterData(results.result, options))
   }
 
-  private filterData(data: GeocodingResult[], options: GeocodingOptions | undefined): GeocodingResult[] {
+  private filterData(
+    data: GeocodingResult[],
+    options: GeocodingOptions | undefined
+  ): GeocodingResult[] {
     if (options?.scope) {
       return data
         .filter((item) => String(item.category).includes(String(options.scope)))
@@ -30,7 +53,6 @@ class MapyCz {
       return data;
     }
   }
-
 }
 
 export const Mapy = new MapyCz();
