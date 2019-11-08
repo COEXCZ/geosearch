@@ -1,10 +1,11 @@
 import { Mapy } from "./index";
 
-const bounds: any = { sw: null };
-
 Mapy.geoocode("Praha", {
   scope: "muni",
-  bounds: bounds
+  bounds: {
+    sw: { lat: 48.5370786, lng: 12.0921668 },
+    ne: { lat: 51.0746358, lng: 18.892704 }
+  }
 })
   .then(data => console.log("Results async", data))
   .catch(e => {
