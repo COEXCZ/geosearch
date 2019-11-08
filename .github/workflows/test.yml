@@ -1,0 +1,23 @@
+name: Build & Run tests
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+      - name: Use Node.js 11.x
+        uses: actions/setup-node@master
+        with:
+          node-version: 11.x
+
+      - name: Install dependencies # Install all deps
+        run: yarn
+
+      - name: Build Mapycz # Build
+        run: yarn build
+
+      - name: Run tests # Run tests
+        run: yarn test --configuration=ci
