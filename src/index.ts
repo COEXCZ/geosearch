@@ -3,21 +3,27 @@ import { GeocodingData, GeocodingOptions, GeocodingResult } from './geo.interfac
 import { createError, getBounds } from './utils';
 import { API_URL, COUNT } from './variables';
 
-class MapyCz {
+class PlacesSuggest {
   constructor() {}
 
-  public async geoocode(query: string, options?: GeocodingOptions): Promise<GeocodingResult[]> {
+  public async geocode(query: string, options?: GeocodingOptions): Promise<GeocodingResult[]> {
     const bounds = await getBounds(options).catch(() => {
       throw createError('Input Error');
     });
-    const response = await axios
-      .get<GeocodingData>(`${API_URL}?count=${COUNT}&phrase=${encodeURIComponent(query)}${bounds}`)
-      .catch((axiosError) => {
-        if (!axiosError.response) {
-          throw createError('Network Error', axiosError.response, axiosError);
-        }
-        throw createError('API request failed', axiosError.response, axiosError);
-      });
+    const apiUrl = `${API_URL}?count=${COUNT}&phrase=${encodeURIComponent(query)}${bounds}`;
+
+    // For debugging
+    if (options?.debug) {
+      console.log('Options:', options);
+      console.log('Calling url:', apiUrl);
+    }
+
+    const response = await axios.get<GeocodingData>(apiUrl).catch((axiosError) => {
+      if (!axiosError.response) {
+        throw createError('Network Error', axiosError.response, axiosError);
+      }
+      throw createError('API request failed', axiosError.response, axiosError);
+    });
     if (response.statusText === 'OK' || response.status === 200) {
       return this.filterData(response.data.result, options);
     }
@@ -25,14 +31,18 @@ class MapyCz {
   }
 
   private filterData(data: GeocodingResult[], options: GeocodingOptions | undefined): GeocodingResult[] {
-    if (options && options.scope) {
-      return data
-        .filter((item) => String(item.category).includes(String(options.scope)))
-        .filter((item) => item.userData.source === options.scope);
-    } else {
-      return data;
+    let places = data;
+    if (options?.scope) {
+      // Filter category by scope
+      places.filter((item) => String(item.category).includes(String(options.scope)));
+
+      // Special conditions for Czech Republic
+      if (options?.country === 'cz') {
+        places.filter((item) => item.userData.source === options.scope);
+      }
     }
+    return places;
   }
 }
 
-export const Mapy = new MapyCz();
+export const placesSuggest = new PlacesSuggest();

@@ -62,6 +62,8 @@ export interface LatLngBounds {
 export interface GeocodingOptions {
   scope?: GeocodingScope;
   bounds?: LatLngBounds;
+  country?: GeocodingCountries;
+  debug?: boolean;
 }
 
 export type GeocoderErrorMessage = 'Error' | 'Network Error' | 'Input Error' | 'API request failed';
@@ -74,8 +76,6 @@ export interface GeocoderError extends Error {
   axiosResponse?: AxiosResponse;
 }
 
-export enum GeocodingCountryBounds {
-  cz = '48.5370786,12.0921668|51.0746358,18.8927040',
-}
+export type GeocodingCountries = 'cz' | 'sk' | 'de' | 'us' | 'gb';
 
-export type GeocodingScope = 'muni';
+export type GeocodingScope = 'muni' | 'area' | 'pubt' | 'street';

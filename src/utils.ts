@@ -1,11 +1,18 @@
 import { AxiosError, AxiosResponse } from 'axios';
+import { getCountryBounds } from './countries';
 import { GeocoderError, GeocoderErrorMessage, GeocodingOptions } from './geo.interface';
 
 export const getBounds = (options: GeocodingOptions | undefined): Promise<string> => {
   return new Promise((resolve) => {
     let boundsString = '';
-    if (options && options.bounds) {
-      boundsString = `&bounds=${options.bounds.sw.lat},${options.bounds.sw.lng}|${options.bounds.ne.lat},${options.bounds.ne.lng}`;
+    let bounds;
+    if (options?.bounds || options?.country) {
+      bounds = options?.bounds || getCountryBounds(options?.country);
+      if (bounds) {
+        boundsString = `&bounds=${encodeURIComponent(
+          `${bounds.sw.lat},${bounds.sw.lng}|${bounds.ne.lat},${bounds.ne.lng}`
+        )}`;
+      }
     }
     resolve(boundsString);
   });
