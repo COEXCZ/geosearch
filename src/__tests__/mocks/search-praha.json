@@ -9,26 +9,13 @@
       "highlight": [],
       "sentence": "",
       "userData": {
-        "bbox": [
-          49.941898345947266,
-          14.22443675994873,
-          50.17742919921875,
-          14.706787109375
-        ],
+        "bbox": [49.941898345947266, 14.22443675994873, 50.17742919921875, 14.706787109375],
         "country": "Česko",
         "district": "Hlavní město Praha",
         "elasticWeight": 0,
         "evidenceNumber": "",
-        "highlight": [
-          0,
-          5
-        ],
-        "highlightSecond": [
-          19,
-          24,
-          44,
-          49
-        ],
+        "highlight": [0, 5],
+        "highlightSecond": [19, 24, 44, 49],
         "houseNumber": "",
         "iconType": "geo",
         "id": 3468,
@@ -64,24 +51,13 @@
       "highlight": [],
       "sentence": "",
       "userData": {
-        "bbox": [
-          50.084128456501332,
-          14.407177245574243,
-          50.088451373225233,
-          14.418406186625736
-        ],
+        "bbox": [50.084128456501332, 14.407177245574243, 50.088451373225233, 14.418406186625736],
         "country": "Česko",
         "district": "Hlavní město Praha",
         "elasticWeight": 0,
         "evidenceNumber": "",
-        "highlight": [
-          17,
-          22
-        ],
-        "highlightSecond": [
-          13,
-          18
-        ],
+        "highlight": [17, 22],
+        "highlightSecond": [13, 18],
         "houseNumber": "",
         "iconType": "default",
         "id": 1914541,
@@ -117,28 +93,13 @@
       "highlight": [],
       "sentence": "",
       "userData": {
-        "bbox": [
-          50.080917851824381,
-          14.431163755374241,
-          50.085241058100188,
-          14.442392696425735
-        ],
+        "bbox": [50.080917851824381, 14.431163755374241, 50.085241058100188, 14.442392696425735],
         "country": "Česko",
         "district": "Hlavní město Praha",
         "elasticWeight": 0,
         "evidenceNumber": "",
-        "highlight": [
-          0,
-          5
-        ],
-        "highlightSecond": [
-          0,
-          5,
-          20,
-          25,
-          40,
-          45
-        ],
+        "highlight": [0, 5],
+        "highlightSecond": [0, 5, 20, 25, 40, 45],
         "houseNumber": "",
         "iconType": "default",
         "id": 15212548,
@@ -174,28 +135,13 @@
       "highlight": [],
       "sentence": "",
       "userData": {
-        "bbox": [
-          50.066335409538553,
-          14.399269283574265,
-          50.070659930777133,
-          14.410498224625758
-        ],
+        "bbox": [50.066335409538553, 14.399269283574265, 50.070659930777133, 14.410498224625758],
         "country": "Česko",
         "district": "Hlavní město Praha",
         "elasticWeight": 0,
         "evidenceNumber": "",
-        "highlight": [
-          0,
-          5
-        ],
-        "highlightSecond": [
-          0,
-          5,
-          20,
-          25,
-          40,
-          45
-        ],
+        "highlight": [0, 5],
+        "highlightSecond": [0, 5, 20, 25, 40, 45],
         "houseNumber": "",
         "iconType": "default",
         "id": 15699332,
@@ -231,28 +177,13 @@
       "highlight": [],
       "sentence": "",
       "userData": {
-        "bbox": [
-          50.085668880566637,
-          14.428530718574253,
-          50.089991658360852,
-          14.439759659625746
-        ],
+        "bbox": [50.085668880566637, 14.428530718574253, 50.089991658360852, 14.439759659625746],
         "country": "Česko",
         "district": "Hlavní město Praha",
         "elasticWeight": 0,
         "evidenceNumber": "",
-        "highlight": [
-          0,
-          5
-        ],
-        "highlightSecond": [
-          0,
-          5,
-          20,
-          25,
-          40,
-          45
-        ],
+        "highlight": [0, 5],
+        "highlightSecond": [0, 5, 20, 25, 40, 45],
         "houseNumber": "",
         "iconType": "default",
         "id": 15212549,
@@ -288,28 +219,13 @@
       "highlight": [],
       "sentence": "",
       "userData": {
-        "bbox": [
-          50.087215236700999,
-          14.435304656674264,
-          50.091537875027427,
-          14.446533597725757
-        ],
+        "bbox": [50.087215236700999, 14.435304656674264, 50.091537875027427, 14.446533597725757],
         "country": "Česko",
         "district": "Hlavní město Praha",
         "elasticWeight": 0,
         "evidenceNumber": "",
-        "highlight": [
-          0,
-          5
-        ],
-        "highlightSecond": [
-          0,
-          5,
-          20,
-          25,
-          40,
-          45
-        ],
+        "highlight": [0, 5],
+        "highlightSecond": [0, 5, 20, 25, 40, 45],
         "houseNumber": "",
         "iconType": "default",
         "id": 15210405,
@@ -345,28 +261,13 @@
       "highlight": [],
       "sentence": "",
       "userData": {
-        "bbox": [
-          50.108149749617347,
-          14.435791718874253,
-          50.112470499523887,
-          14.447020659925746
-        ],
+        "bbox": [50.108149749617347, 14.435791718874253, 50.112470499523887, 14.447020659925746],
         "country": "Česko",
         "district": "Hlavní město Praha",
         "elasticWeight": 0,
         "evidenceNumber": "",
-        "highlight": [
-          0,
-          5
-        ],
-        "highlightSecond": [
-          0,
-          5,
-          20,
-          25,
-          40,
-          45
-        ],
+        "highlight": [0, 5],
+        "highlightSecond": [0, 5, 20, 25, 40, 45],
         "houseNumber": "",
         "iconType": "default",
         "id": 15699330,
@@ -402,20 +303,12 @@
       "highlight": [],
       "sentence": "",
       "userData": {
-        "bbox": [
-          49.872425079345703,
-          14.351085662841797,
-          50.293170928955078,
-          14.942538261413574
-        ],
+        "bbox": [49.872425079345703, 14.351085662841797, 50.293170928955078, 14.942538261413574],
         "country": "Česko",
         "district": "Praha-východ",
         "elasticWeight": 0,
         "evidenceNumber": "",
-        "highlight": [
-          6,
-          11
-        ],
+        "highlight": [6, 11],
         "highlightSecond": [],
         "houseNumber": "",
         "iconType": "geo",
@@ -452,28 +345,13 @@
       "highlight": [],
       "sentence": "",
       "userData": {
-        "bbox": [
-          50.06236319876578,
-          14.442015140774247,
-          50.066688078147507,
-          14.453244081825742
-        ],
+        "bbox": [50.06236319876578, 14.442015140774247, 50.066688078147507, 14.453244081825742],
         "country": "Česko",
         "district": "Hlavní město Praha",
         "elasticWeight": 0,
         "evidenceNumber": "",
-        "highlight": [
-          0,
-          5
-        ],
-        "highlightSecond": [
-          0,
-          5,
-          20,
-          25,
-          40,
-          45
-        ],
+        "highlight": [0, 5],
+        "highlightSecond": [0, 5, 20, 25, 40, 45],
         "houseNumber": "",
         "iconType": "default",
         "id": 15212586,
@@ -509,20 +387,12 @@
       "highlight": [],
       "sentence": "",
       "userData": {
-        "bbox": [
-          48.347431182861328,
-          19.472129821777344,
-          48.394371032714844,
-          19.521770477294922
-        ],
+        "bbox": [48.347431182861328, 19.472129821777344, 48.394371032714844, 19.521770477294922],
         "country": "Slovensko",
         "district": "Lučenec",
         "elasticWeight": 0,
         "evidenceNumber": "",
-        "highlight": [
-          0,
-          5
-        ],
+        "highlight": [0, 5],
         "highlightSecond": [],
         "houseNumber": "",
         "iconType": "geo",

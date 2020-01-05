@@ -9,24 +9,13 @@
       "highlight": [],
       "sentence": "",
       "userData": {
-        "bbox": [
-          51.286758422851562,
-          -0.51037514209747314,
-          51.691875457763672,
-          0.33401545882225037
-        ],
+        "bbox": [51.286758422851562, -0.51037514209747314, 51.691875457763672, 0.33401545882225037],
         "country": "",
         "district": "",
         "elasticWeight": 0,
         "evidenceNumber": "",
-        "highlight": [
-          0,
-          6
-        ],
-        "highlightSecond": [
-          13,
-          19
-        ],
+        "highlight": [0, 6],
+        "highlightSecond": [13, 19],
         "houseNumber": "",
         "iconType": "geo",
         "id": 1631,

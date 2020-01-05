@@ -9,20 +9,12 @@
       "highlight": [],
       "sentence": "",
       "userData": {
-        "bbox": [
-          50.070785522460938,
-          17.294231414794922,
-          50.084205627441406,
-          17.320915222167969
-        ],
+        "bbox": [50.070785522460938, 17.294231414794922, 50.084205627441406, 17.320915222167969],
         "country": "Česko",
         "district": "Bruntál",
         "elasticWeight": 0,
         "evidenceNumber": "",
-        "highlight": [
-          8,
-          16
-        ],
+        "highlight": [8, 16],
         "highlightSecond": [],
         "houseNumber": "",
         "iconType": "geo",
@@ -59,20 +51,12 @@
       "highlight": [],
       "sentence": "",
       "userData": {
-        "bbox": [
-          49.756065368652344,
-          12.566083908081055,
-          49.789039611816406,
-          12.617607116699219
-        ],
+        "bbox": [49.756065368652344, 12.566083908081055, 49.789039611816406, 12.617607116699219],
         "country": "Česko",
         "district": "Tachov",
         "elasticWeight": 0,
         "evidenceNumber": "",
-        "highlight": [
-          0,
-          8
-        ],
+        "highlight": [0, 8],
         "highlightSecond": [],
         "houseNumber": "",
         "iconType": "geo",
@@ -109,20 +93,12 @@
       "highlight": [],
       "sentence": "",
       "userData": {
-        "bbox": [
-          49.818595886230469,
-          16.528049468994141,
-          49.862514495849609,
-          16.569040298461914
-        ],
+        "bbox": [49.818595886230469, 16.528049468994141, 49.862514495849609, 16.569040298461914],
         "country": "Česko",
         "district": "Ústí nad Orlicí",
         "elasticWeight": 0,
         "evidenceNumber": "",
-        "highlight": [
-          8,
-          16
-        ],
+        "highlight": [8, 16],
         "highlightSecond": [],
         "houseNumber": "",
         "iconType": "geo",
@@ -159,24 +135,13 @@
       "highlight": [],
       "sentence": "",
       "userData": {
-        "bbox": [
-          50.071301854247388,
-          17.300693036274261,
-          50.075625927671318,
-          17.311921977325756
-        ],
+        "bbox": [50.071301854247388, 17.300693036274261, 50.075625927671318, 17.311921977325756],
         "country": "Česko",
         "district": "Bruntál",
         "elasticWeight": 0,
         "evidenceNumber": "",
-        "highlight": [
-          8,
-          16
-        ],
-        "highlightSecond": [
-          8,
-          16
-        ],
+        "highlight": [8, 16],
+        "highlightSecond": [8, 16],
         "houseNumber": "6",
         "iconType": "default",
         "id": 1712814,
@@ -212,20 +177,12 @@
       "highlight": [],
       "sentence": "",
       "userData": {
-        "bbox": [
-          50.164326476534377,
-          16.308186790828692,
-          50.17295744599501,
-          16.330644672931683
-        ],
+        "bbox": [50.164326476534377, 16.308186790828692, 50.17295744599501, 16.330644672931683],
         "country": "Česko",
         "district": "Rychnov nad Kněžnou",
         "elasticWeight": 0,
         "evidenceNumber": "",
-        "highlight": [
-          0,
-          8
-        ],
+        "highlight": [0, 8],
         "highlightSecond": [],
         "houseNumber": "",
         "iconType": "geo",

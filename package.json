@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "tsc -w",
-    "build": "tsc",
+    "build": "tsc && cp package.json dist/package.json",
     "example": "node dist/example",
     "gpr-setup": "node scripts/gpr",
     "syncprojects": " cp package.json dist/package.json && cp README.md dist/README.md",
-    "test": "echo \"Error: no test specified\"",
-    "lint": "eslint ./src/** --fix",
+    "test": "jest --config jestconfig.json",
+    "lint": "eslint ./src/**/**/* --fix",
     "release:patch": "git checkout master && npm version patch -m \"chore(update): patch release %s 🐛 \"",
     "release:minor": "git checkout master && npm version minor -m \"chore(update): release %s 🚀\"",
     "release:major": "git checkout master && npm version major -m \"chore(update): major release %s 💥 \""
@@ -34,17 +34,20 @@
   },
   "homepage": "https://github.com/bartholomej/mapycz#readme",
   "devDependencies": {
+    "@types/jest": "^24.0.25",
     "@types/node": "^12.12.6",
-    "@typescript-eslint/eslint-plugin": "^2.6.1",
-    "@typescript-eslint/parser": "^2.6.1",
-    "eslint": "^6.6.0",
+    "@typescript-eslint/eslint-plugin": "^2.14.0",
+    "@typescript-eslint/parser": "^2.14.0",
+    "eslint": "^6.8.0",
     "eslint-config-google": "^0.14.0",
-    "eslint-config-prettier": "^6.5.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "husky": "^3.0.9",
-    "prettier": "^1.18.2",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^3.1.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1",
-    "typescript": "^3.7.2"
+    "ts-jest": "^24.2.0",
+    "typescript": "^3.7.4"
   },
   "husky": {
     "hooks": {

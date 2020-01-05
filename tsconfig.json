@@ -15,8 +15,9 @@
     "target": "es2017",
     "moduleResolution": "node",
     "rootDir": ".",
-    "outDir": "dist"
+    "outDir": "dist",
+    "resolveJsonModule": true
   },
-  "include": ["**/*.ts", "test/**/*.ts"],
-  "exclude": ["dist/**/*"]
+  "include": ["**/*.ts"],
+  "exclude": ["dist/**/*", "*/__tests__/**/*"]
 }

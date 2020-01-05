@@ -1,6 +1,6 @@
 import { AxiosError, AxiosResponse } from 'axios';
 import { getCountryBounds } from './countries';
-import { GeocoderError, GeocoderErrorMessage, GeocodingOptions } from './geo.interface';
+import { GeocoderError, GeocoderErrorMessage, GeocodingOptions, GeocodingResult } from './geo.interface';
 
 export const getBounds = (options: GeocodingOptions | undefined): Promise<string> => {
   return new Promise((resolve) => {
@@ -34,3 +34,17 @@ export const createError = (
 export const isGeocoderError = (e: Error | GeocoderError): e is GeocoderError => {
   return (<GeocoderError>e).isGeocoderError !== undefined;
 };
+
+export function filterData(data: GeocodingResult[], options: GeocodingOptions | undefined): GeocodingResult[] {
+  let places = data;
+  if (options?.scope) {
+    // Filter category by scope
+    places = places.filter((item) => String(item.category).includes(String(options.scope)));
+
+    // Special conditions for Czech Republic
+    if (options?.country === 'cz') {
+      places = places.filter((item) => item.userData.source === options.scope);
+    }
+  }
+  return places;
+}

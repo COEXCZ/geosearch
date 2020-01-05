@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { GeocodingData, GeocodingOptions, GeocodingResult } from './geo.interface';
-import { createError, getBounds } from './utils';
+import { createError, filterData, getBounds } from './utils';
 import { API_URL, COUNT } from './variables';
 
 class PlacesSuggest {
@@ -25,23 +25,9 @@ class PlacesSuggest {
       throw createError('API request failed', axiosError.response, axiosError);
     });
     if (response.statusText === 'OK' || response.status === 200) {
-      return this.filterData(response.data.result, options);
+      return filterData(response.data.result, options);
     }
     throw createError('API request failed', response);
-  }
-
-  private filterData(data: GeocodingResult[], options: GeocodingOptions | undefined): GeocodingResult[] {
-    const places = data;
-    if (options?.scope) {
-      // Filter category by scope
-      places.filter((item) => String(item.category).includes(String(options.scope)));
-
-      // Special conditions for Czech Republic
-      if (options?.country === 'cz') {
-        places.filter((item) => item.userData.source === options.scope);
-      }
-    }
-    return places;
   }
 }
 

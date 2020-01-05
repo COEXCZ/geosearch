@@ -9,20 +9,12 @@
       "highlight": [],
       "sentence": "",
       "userData": {
-        "bbox": [
-          51.286758422851562,
-          -0.51037514209747314,
-          51.691875457763672,
-          0.33401545882225037
-        ],
+        "bbox": [51.286758422851562, -0.51037514209747314, 51.691875457763672, 0.33401545882225037],
         "country": "",
         "district": "",
         "elasticWeight": 0,
         "evidenceNumber": "",
-        "highlight": [
-          0,
-          6
-        ],
+        "highlight": [0, 6],
         "highlightSecond": [],
         "houseNumber": "",
         "iconType": "geo",
@@ -59,20 +51,12 @@
       "highlight": [],
       "sentence": "",
       "userData": {
-        "bbox": [
-          51.490270969069023,
-          -0.15461435260775686,
-          51.494465779433014,
-          -0.14338541155626286
-        ],
+        "bbox": [51.490270969069023, -0.15461435260775686, 51.494465779433014, -0.14338541155626286],
         "country": "United Kingdom",
         "district": "",
         "elasticWeight": 0,
         "evidenceNumber": "",
-        "highlight": [
-          27,
-          33
-        ],
+        "highlight": [27, 33],
         "highlightSecond": [],
         "houseNumber": "",
         "iconType": "default",
@@ -109,12 +93,7 @@
       "highlight": [],
       "sentence": "",
       "userData": {
-        "bbox": [
-          51.414902913350289,
-          -0.18420483246507879,
-          51.549167142070999,
-          0.17512128118272977
-        ],
+        "bbox": [51.414902913350289, -0.18420483246507879, 51.549167142070999, 0.17512128118272977],
         "country": "",
         "district": "",
         "elasticWeight": 0,
@@ -156,20 +135,12 @@
       "highlight": [],
       "sentence": "",
       "userData": {
-        "bbox": [
-          51.507133483886719,
-          -0.078049056231975555,
-          51.509098052978516,
-          -0.074483312666416168
-        ],
+        "bbox": [51.507133483886719, -0.078049056231975555, 51.509098052978516, -0.074483312666416168],
         "country": "",
         "district": "",
         "elasticWeight": 0,
         "evidenceNumber": "",
-        "highlight": [
-          9,
-          15
-        ],
+        "highlight": [9, 15],
         "highlightSecond": [],
         "houseNumber": "",
         "iconType": "default",
@@ -206,20 +177,12 @@
       "highlight": [],
       "sentence": "",
       "userData": {
-        "bbox": [
-          54.930051640970277,
-          -7.4964640891651326,
-          55.053737097251279,
-          -7.1371379755173239
-        ],
+        "bbox": [54.930051640970277, -7.4964640891651326, 55.053737097251279, -7.1371379755173239],
         "country": "",
         "district": "",
         "elasticWeight": 0,
         "evidenceNumber": "",
-        "highlight": [
-          0,
-          6
-        ],
+        "highlight": [0, 6],
         "highlightSecond": [],
         "houseNumber": "",
         "iconType": "geo",
