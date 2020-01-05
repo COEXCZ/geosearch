@@ -31,7 +31,7 @@ class PlacesSuggest {
   }
 
   private filterData(data: GeocodingResult[], options: GeocodingOptions | undefined): GeocodingResult[] {
-    let places = data;
+    const places = data;
     if (options?.scope) {
       // Filter category by scope
       places.filter((item) => String(item.category).includes(String(options.scope)));

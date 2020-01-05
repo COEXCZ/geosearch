@@ -1,33 +1,38 @@
 {
   "name": "mapycz",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Mapy cz",
   "main": "index.js",
   "scripts": {
     "start": "tsc -w",
     "build": "tsc",
     "example": "node dist/example",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint ./src/** --fix"
+    "gpr-setup": "node scripts/gpr",
+    "syncprojects": " cp package.json dist/package.json && cp README.md dist/README.md",
+    "test": "echo \"Error: no test specified\"",
+    "lint": "eslint ./src/** --fix",
+    "release:patch": "git checkout master && npm version patch -m \"chore(update): patch release %s 🐛 \"",
+    "release:minor": "git checkout master && npm version minor -m \"chore(update): release %s 🚀\"",
+    "release:major": "git checkout master && npm version major -m \"chore(update): major release %s 💥 \""
   },
   "dependencies": {
     "axios": "^0.19.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coex/mapycz.git"
+    "url": "git+https://github.com/bartholomej/mapycz.git"
   },
   "keywords": [
     "mapycz",
     "maps",
     "mapy"
   ],
-  "author": "COEX",
+  "author": "bartholomej",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/coex/mapycz/issues"
+    "url": "https://github.com/bartholomej/mapycz/issues"
   },
-  "homepage": "https://github.com/coex/mapycz#readme",
+  "homepage": "https://github.com/bartholomej/mapycz#readme",
   "devDependencies": {
     "@types/node": "^12.12.6",
     "@typescript-eslint/eslint-plugin": "^2.6.1",
@@ -45,5 +50,9 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged && yarn run lint"
     }
-  }
+  },
+  "files": [
+    "dist/**/*",
+    "index.js"
+  ]
 }

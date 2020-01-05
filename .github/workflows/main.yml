@@ -1,0 +1,43 @@
+name: Build & Run tests & Publish
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+      - name: Use Node.js 13.x
+        uses: actions/setup-node@master
+        with:
+          node-version: 13.x
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Build app
+        run: yarn build
+
+      - name: Run tests
+        run: yarn test
+
+      - name: Set up package for GPR
+        run: yarn gpr-setup
+
+      - name: Sync versions
+        run: yarn syncprojects
+
+      - name: Set up Node.js for GPR
+        uses: actions/setup-node@master
+        with:
+          registry-url: 'https://npm.pkg.github.com/'
+          scope: '@bartholomej'
+
+      - name: Publish package to GPR
+        run: npm publish --folder dist
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
