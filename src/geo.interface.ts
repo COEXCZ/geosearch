@@ -1,3 +1,5 @@
+import { AxiosError, AxiosResponse } from 'axios';
+
 export interface GeocodingUserData {
   bbox: number[];
   country: string;
@@ -47,14 +49,29 @@ export interface GeocodingData {
   result: GeocodingResult[];
 }
 
+export interface LatLng {
+  lat: number;
+  lng: number;
+}
+
+export interface LatLngBounds {
+  sw: LatLng;
+  ne: LatLng;
+}
+
 export interface GeocodingOptions {
   scope?: GeocodingScope;
-  country?: GeocodingCountryBounds;
-  bounds?: string;
+  bounds?: LatLngBounds;
+}
+
+export type GeocoderErrorMessage = 'Error' | 'Network Error' | 'Input Error' | 'API request failed';
+
+export interface GeocoderError extends Error {
+  constructor: (message: GeocoderErrorMessage) => void;
+  isGeocoderError: boolean;
+  message: GeocoderErrorMessage;
+  axiosError?: AxiosError;
+  axiosResponse?: AxiosResponse;
 }
 
 export type GeocodingScope = 'muni';
-
-export enum GeocodingCountryBounds {
-  cz = '48.5370786,12.0921668|51.0746358,18.8927040'
-}
