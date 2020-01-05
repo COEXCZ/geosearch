@@ -1,4 +1,4 @@
-import { AxiosError, AxiosResponse } from "axios";
+import { AxiosError, AxiosResponse } from 'axios';
 
 export interface GeocodingUserData {
   bbox: number[];
@@ -64,11 +64,7 @@ export interface GeocodingOptions {
   bounds?: LatLngBounds;
 }
 
-export type GeocoderErrorMessage =
-  | "Error"
-  | "Network Error"
-  | "Input Error"
-  | "API request failed";
+export type GeocoderErrorMessage = 'Error' | 'Network Error' | 'Input Error' | 'API request failed';
 
 export interface GeocoderError extends Error {
   constructor: (message: GeocoderErrorMessage) => void;
@@ -78,4 +74,4 @@ export interface GeocoderError extends Error {
   axiosResponse?: AxiosResponse;
 }
 
-export type GeocodingScope = "muni";
+export type GeocodingScope = 'muni';
