@@ -1,13 +1,45 @@
-# mapycz
-Mapy cz
+# Mapy.cz suggest
 
-## Dev
+Mapy cz suggest wrapper
+
+## Example
+
+```javascript
+import { placesSuggest } from 'mapycz';
+
+placesSuggest
+  .geocode('Prah', {
+    scope: 'muni',
+    country: 'cz',
+    debug: true,
+  })
+  .then((data) => console.log('Results', places))
+  .catch((e) => {
+    console.log('users catch', e);
+  });
+```
+
+## Options
+
+<!-- scope?: GeocodingScope;
+  bounds?: LatLngBounds;
+  country?: GeocodingCountries;
+  debug?: boolean; -->
+
+| Option      | Type                                           | Default | Description                                              |
+| ----------- | ---------------------------------------------- | ------- | -------------------------------------------------------- |
+| **scope**   | `'muni'` \| `'area'` \| `'pubt'` \| `'street'` | null    | Preferred category of results                            |
+| **bounds**  | `{ sw: LatLng, ne: LatLng}`                    | null    | Preffered country boundaries                             |
+| **country** | `'cz'` \| `'sk'` \| `'us'` \| `'de'`           | null    | Preferred country (same as bounds but with some presets) |
+| **debug**   | boolean                                        | false   | Print additional information to console                  |
+
+## Development
 
 ```bash
 yarn start
 ```
 
-### Calling example
+### Run example call
 
 ```bash
 yarn example
