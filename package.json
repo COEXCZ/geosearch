@@ -1,6 +1,6 @@
 {
   "name": "mapycz",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Mapy cz",
   "main": "index.js",
   "scripts": {
