@@ -1,7 +1,7 @@
-import { placesSuggest } from './index';
+import { geoholic } from './index';
 
-placesSuggest
-  .geocode('vltava', {
+geoholic
+  .suggest('Praha', {
     scope: 'muni',
     country: 'cz',
     debug: true,

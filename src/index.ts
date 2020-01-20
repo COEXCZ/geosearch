@@ -3,10 +3,10 @@ import { GeocodingData, GeocodingOptions, GeocodingResult } from './geo.interfac
 import { createError, filterData, getBounds } from './utils';
 import { API_URL, COUNT } from './variables';
 
-class PlacesSuggest {
+class Geoholic {
   constructor() {}
 
-  public async geocode(query: string, options?: GeocodingOptions): Promise<GeocodingResult[]> {
+  public async suggest(query: string, options?: GeocodingOptions): Promise<GeocodingResult[]> {
     const bounds = await getBounds(options).catch(() => {
       throw createError('Input Error');
     });
@@ -31,4 +31,4 @@ class PlacesSuggest {
   }
 }
 
-export const placesSuggest = new PlacesSuggest();
+export const geoholic = new Geoholic();

@@ -1,7 +1,7 @@
 {
-  "name": "mapycz",
+  "name": "geoholic",
   "version": "0.0.5",
-  "description": "Mapy cz",
+  "description": "Nodejs library for finding places using Mapy.cz Suggest API",
   "main": "index.js",
   "scripts": {
     "start": "tsc -w",
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bartholomej/mapycz.git"
+    "url": "git+https://github.com/bartholomej/geoholic.git"
   },
   "keywords": [
     "mapycz",
@@ -32,9 +32,9 @@
   "author": "bartholomej",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bartholomej/mapycz/issues"
+    "url": "https://github.com/bartholomej/geoholic/issues"
   },
-  "homepage": "https://github.com/bartholomej/mapycz#readme",
+  "homepage": "https://github.com/bartholomej/geoholic#readme",
   "devDependencies": {
     "@types/jest": "^24.0.25",
     "@types/node": "^12.12.6",
