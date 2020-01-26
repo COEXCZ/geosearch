@@ -3,9 +3,9 @@
 
 # Geoholic
 
-> Simple nodejs library for finding places all around the world
-
-Source: [Mapy.cz Suggest API](https://api.mapy.cz/view?page=suggestadv)
+> Simple nodejs library to find places all around the world
+>
+> _Datasource: Mapy.cz Suggest API_
 
 ## Install
 
@@ -13,29 +13,82 @@ Source: [Mapy.cz Suggest API](https://api.mapy.cz/view?page=suggestadv)
 yarn add geoholic
 ```
 
-## Example
+## Usage
 
-### Call
+### City, town, village
+
+Let's find all _Springfields_ in the World
 
 ```javascript
 import { geoholic } from 'geoholic';
 
 geoholic
-  .suggest('Prah', {
-    scope: 'muni',
-    country: 'cz',
-    debug: true,
+  .suggest('Springfield', {
+    scope: 'muni', // Only cities, villages, ( municipalities)
   })
-  .then((data) => console.log('Results', places))
+  .then((places) => {
+    // ... do something cool
+    console.log('Results', places);
+  })
   .catch((e) => {
-    console.log('users catch', e);
+    // catch Error
+    console.log('Error', e);
   });
 ```
 
-### Answer
+### Places start with
+
+Let's find cities or villages start with _Ber_ in _Germany_
 
 ```javascript
-{
+import { geoholic } from 'geoholic';
+
+geoholic
+  .suggest('Ber', {
+    scope: 'muni', // Only cities, villages, ( municipalities)
+    country: 'de', // Only from the Czech Republic
+  })
+  .then((places) => {
+    // ... do something cool
+    console.log('Results', places);
+  })
+  .catch((e) => {
+    // catch Error
+    console.log('Error', e);
+  });
+```
+
+### Public transport
+
+Let's find position of public transport station in the Czech Republic
+
+```javascript
+import { geoholic } from 'geoholic';
+
+geoholic
+  .suggest('kokořín', {
+    scope: 'pubt', // Only public transport related places
+    country: 'cz', // Only from the Czech Republic
+  })
+  .then((places) => {
+    // ... do something cool
+    console.log('Results', places);
+  })
+  .catch((e) => {
+    // catch Error
+    console.log('Error', e);
+  });
+```
+
+### More!
+
+Let's try to find **rivers, lakes, mountains, streets, national parks, areas, tourist attractions**, ..., everything what awesome [Mapy.cz Suggest API](https://api.mapy.cz/view?page=suggestadv) can do.
+
+## Results (example)
+
+```javascript
+[
+  {
     category: 'municipality_cz',
     highlight: [],
     sentence: '',
@@ -75,9 +128,10 @@ geoholic
       suggestThirdRow: 'Hlavní město',
       ward: '',
       wikiId: 'Q1085',
-      zipCode: ''
-    }
-  }
+      zipCode: '',
+    },
+  },
+];
 ```
 
 ## Options
@@ -91,11 +145,15 @@ geoholic
 
 ## Development
 
+### Developing and debugging library
+
 ```bash
 yarn start
 ```
 
-### Run example call
+### Run example
+
+You can find and modify it in `example.ts` file
 
 ```bash
 yarn example
@@ -106,3 +164,23 @@ yarn example
 ```bash
 yarn test
 ```
+
+## License
+
+### Data source
+
+Awesome [Mapy.cz Suggest API](https://api.mapy.cz/view?page=suggestadv) from Seznam.cz
+
+Please read this [license](https://api.mapy.cz/#pact) before use.
+
+### This library
+
+Code of this library is licensed under the [MIT license].
+
+---
+
+&copy; 2020 [Lukas Bartak](http://bartweb.cz)
+
+Proudly powered by nature 🗻, wind 💨, tea 🍵 and beer 🍺 ;)
+
+[mit license]: LICENSE
