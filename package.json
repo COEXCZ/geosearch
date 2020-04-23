@@ -1,6 +1,6 @@
 {
   "name": "@coex/geosearch",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Nodejs library for finding places using Mapy.cz Suggest API",
   "main": "index.js",
   "scripts": {
