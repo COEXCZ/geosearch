@@ -1,6 +1,6 @@
 {
-  "name": "geoholic",
-  "version": "0.0.6",
+  "name": "@coex/geoholic",
+  "version": "0.0.7",
   "description": "Nodejs library for finding places using Mapy.cz Suggest API",
   "main": "index.js",
   "scripts": {
