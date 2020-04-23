@@ -1,5 +1,5 @@
-![](https://github.com/bartholomej/mapycz/workflows/Build%20&%20Run%20tests%20&%20Publish/badge.svg)
-![](https://github.com/bartholomej/mapycz/workflows/Build%20&%20Run%20tests/badge.svg)
+![](https://github.com/COEXCZ/geoholic/workflows/Build%20&%20Run%20tests%20&%20Publish/badge.svg)
+![](https://github.com/COEXCZ/geoholic/workflows/Build%20&%20Run%20tests/badge.svg)
 
 # Geoholic
 

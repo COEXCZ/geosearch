@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bartholomej/geoholic.git"
+    "url": "git+https://github.com/COEXCZ/geoholic.git"
   },
   "keywords": [
     "mapycz",
@@ -30,12 +30,12 @@
     "mapy",
     "geocoding"
   ],
-  "author": "bartholomej",
+  "author": "COEX (https://github.com/COEXCZ)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bartholomej/geoholic/issues"
+    "url": "https://github.com/COEXCZ/geoholic/issues"
   },
-  "homepage": "https://github.com/bartholomej/geoholic#readme",
+  "homepage": "https://github.com/COEXCZ/geoholic#readme",
   "devDependencies": {
     "@types/jest": "^25.2.1",
     "@types/node": "^12.12.6",

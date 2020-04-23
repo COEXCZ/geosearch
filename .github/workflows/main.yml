@@ -41,7 +41,7 @@ jobs:
         uses: actions/setup-node@master
         with:
           registry-url: 'https://npm.pkg.github.com/'
-          scope: '@bartholomej'
+          scope: '@COEXCZ'
 
       - name: Publish package to GPR
         run: npm publish --folder dist
