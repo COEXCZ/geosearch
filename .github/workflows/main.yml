@@ -2,8 +2,8 @@ name: Build & Run tests & Publish
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches:
+      - package-publish
 
 jobs:
   build:
