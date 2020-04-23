@@ -1,4 +1,4 @@
-import { GeocodingData } from '../geo.interface.js';
+import { GeoSearchData } from '../geo.interface.js';
 import { filterData, getBounds } from '../utils';
 import * as mockPrahaResult from './mocks/search-praha.json';
 
@@ -31,7 +31,7 @@ test('Bounds has a priority', async () => {
 });
 
 test('Filter czech municipality', () => {
-  const mockData: GeocodingData = mockPrahaResult;
+  const mockData: GeoSearchData = mockPrahaResult;
 
   const filteredData = filterData(mockData.result, {
     scope: 'muni',

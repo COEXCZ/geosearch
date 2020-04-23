@@ -1,7 +1,7 @@
-import { GeocodingCountries, LatLngBounds } from './geo.interface';
+import { GeoSearchCountries, LatLngBounds } from './geo.interface';
 
 // Country bounding boxes by https://gist.github.com/graydon/11198540
-export function getCountryBounds(country: GeocodingCountries | undefined): LatLngBounds | null {
+export function getCountryBounds(country: GeoSearchCountries | undefined): LatLngBounds | null {
   switch (country) {
     case 'cz':
       return { sw: { lat: 48.5370786, lng: 12.0921668 }, ne: { lat: 51.0746358, lng: 18.892704 } };

@@ -1,7 +1,7 @@
+[![npm version](https://badge.fury.io/js/%40coex%2Fgeosearch.svg)](https://www.npmjs.com/package/@coex/geosearch)
 ![](https://github.com/COEXCZ/geosearch/workflows/Build%20&%20Run%20tests%20&%20Publish/badge.svg)
-![](https://github.com/COEXCZ/geosearch/workflows/Build%20&%20Run%20tests/badge.svg)
 
-# Geosearch
+# GeoSearch
 
 > Simple nodejs library to find places all around the world
 >

@@ -1,6 +1,6 @@
 import { AxiosError, AxiosResponse } from 'axios';
 
-export interface GeocodingUserData {
+export interface GeoSearchUserData {
   bbox: number[];
   country: string;
   district: string;
@@ -34,19 +34,19 @@ export interface GeocodingUserData {
   zipCode: string;
 }
 
-export interface GeocodingResult {
-  category: GeocodingScope | string | undefined;
+export interface GeoSearchResult {
+  category: GeoSearchScope | string | undefined;
   highlight: number[];
   sentence: string;
-  userData: GeocodingUserData;
+  userData: GeoSearchUserData;
 }
 
-export interface GeocodingData {
+export interface GeoSearchData {
   deletedFromBack: number;
   hasGeo: number;
   hasService: number;
   id: string;
-  result: GeocodingResult[];
+  result: GeoSearchResult[];
 }
 
 export interface LatLng {
@@ -59,23 +59,23 @@ export interface LatLngBounds {
   ne: LatLng;
 }
 
-export interface GeocodingOptions {
-  scope?: GeocodingScope;
+export interface GeoSearchOptions {
+  scope?: GeoSearchScope;
   bounds?: LatLngBounds;
-  country?: GeocodingCountries;
+  country?: GeoSearchCountries;
   debug?: boolean;
 }
 
-export type GeocoderErrorMessage = 'Error' | 'Network Error' | 'Input Error' | 'API request failed';
+export type GeoSearchErrorMessage = 'Error' | 'Network Error' | 'Input Error' | 'API request failed';
 
-export interface GeocoderError extends Error {
-  constructor: (message: GeocoderErrorMessage) => void;
-  isGeocoderError: boolean;
-  message: GeocoderErrorMessage;
+export interface GeoSearchError extends Error {
+  constructor: (message: GeoSearchErrorMessage) => void;
+  isGeoSearchError: boolean;
+  message: GeoSearchErrorMessage;
   axiosError?: AxiosError;
   axiosResponse?: AxiosResponse;
 }
 
-export type GeocodingCountries = 'cz' | 'sk' | 'de' | 'us' | 'gb';
+export type GeoSearchCountries = 'cz' | 'sk' | 'de' | 'us' | 'gb';
 
-export type GeocodingScope = 'muni' | 'area' | 'pubt' | 'street';
+export type GeoSearchScope = 'muni' | 'area' | 'pubt' | 'street';
