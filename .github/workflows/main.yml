@@ -2,8 +2,8 @@ name: Build & Run tests & Publish
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches:
+      - package-publish
 
 jobs:
   build:
@@ -17,6 +17,18 @@ jobs:
           node-version: 13.x
           registry-url: 'https://registry.npmjs.org'
 
+      - name: Cache node modules
+        uses: actions/cache@v1
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
       - name: Install dependencies
         run: yarn
 
@@ -26,24 +38,27 @@ jobs:
       - name: Run tests
         run: yarn test
 
-      - name: Publish NPM
-        run: npm publish --folder dist
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-
-      - name: Set up package for GPR
-        run: yarn gpr-setup
+      # - name: Publish NPM
+      #   run: npm publish --folder dist
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
       - name: Sync versions
         run: yarn syncprojects
 
-      - name: Set up Node.js for GPR
+      - name: Set up package for GPR
+        run: yarn gpr:setup
+
+      - name: Use GPR
         uses: actions/setup-node@master
         with:
-          registry-url: 'https://npm.pkg.github.com/'
+          node-version: 13
+          registry-url: https://npm.pkg.github.com/
           scope: '@COEXCZ'
 
-      - name: Publish package to GPR
-        run: npm publish --folder dist
+      - name: Publish to GitHub Package Registry
+        run: |
+          cd dist
+          npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{github.token}}

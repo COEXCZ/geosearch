@@ -1,13 +1,13 @@
 {
   "name": "geoholic",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Nodejs library for finding places using Mapy.cz Suggest API",
   "main": "index.js",
   "scripts": {
     "start": "tsc -w",
-    "build": "tsc && cp package.json dist/package.json",
+    "build": "tsc && yarn syncprojects",
     "example": "node dist/example",
-    "gpr-setup": "node scripts/gpr",
+    "gpr:setup": "node scripts/gpr",
     "syncprojects": " cp package.json dist/package.json && cp README.md dist/README.md",
     "test": "jest --config jestconfig.json",
     "lint": "eslint ./src/**/**/* --fix",

@@ -1,9 +1,12 @@
 const fs = require('fs');
 const { join } = require('path');
 
-const pkg = require('../package.json');
+const pkgDistPath = '../dist/package.json';
 
-pkg.name = `@COEXCZ/${pkg.name}`;
+const pkg = require(pkgDistPath);
 
-fs.writeFileSync(join(__dirname, '../package.json'), JSON.stringify(pkg, null, 2));
+pkg.publishConfig = {};
+pkg.publishConfig.registry = `https://npm.pkg.github.com/@COEXCZ`;
+
+fs.writeFileSync(join(__dirname, pkgDistPath), JSON.stringify(pkg, null, 2));
 console.log(pkg);
