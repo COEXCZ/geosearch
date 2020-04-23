@@ -9,8 +9,16 @@
 
 ## Install
 
+via yarn
+
 ```bash
-yarn add geosearch
+yarn add @coex/geosearch
+```
+
+via npm
+
+```bash
+npm install @coex/geosearch
 ```
 
 ## Usage
