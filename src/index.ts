@@ -3,7 +3,7 @@ import { GeocodingData, GeocodingOptions, GeocodingResult } from './geo.interfac
 import { createError, filterData, getBounds } from './utils';
 import { API_URL, COUNT } from './variables';
 
-class Geoholic {
+class Geosearch {
   constructor() {}
 
   public async suggest(query: string, options?: GeocodingOptions): Promise<GeocodingResult[]> {
@@ -31,4 +31,4 @@ class Geoholic {
   }
 }
 
-export const geoholic = new Geoholic();
+export const geosearch = new Geosearch();

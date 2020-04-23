@@ -1,6 +1,6 @@
-import { geoholic } from './index';
+import { geosearch } from './index';
 
-geoholic
+geosearch
   .suggest('Praha', {
     scope: 'muni',
     country: 'cz',

@@ -1,7 +1,7 @@
-![](https://github.com/COEXCZ/geoholic/workflows/Build%20&%20Run%20tests%20&%20Publish/badge.svg)
-![](https://github.com/COEXCZ/geoholic/workflows/Build%20&%20Run%20tests/badge.svg)
+![](https://github.com/COEXCZ/geosearch/workflows/Build%20&%20Run%20tests%20&%20Publish/badge.svg)
+![](https://github.com/COEXCZ/geosearch/workflows/Build%20&%20Run%20tests/badge.svg)
 
-# Geoholic
+# Geosearch
 
 > Simple nodejs library to find places all around the world
 >
@@ -10,7 +10,7 @@
 ## Install
 
 ```bash
-yarn add geoholic
+yarn add geosearch
 ```
 
 ## Usage
@@ -20,9 +20,9 @@ yarn add geoholic
 Let's find all _Springfields_ in the World
 
 ```javascript
-import { geoholic } from 'geoholic';
+import { geosearch } from 'geosearch';
 
-geoholic
+geosearch
   .suggest('Springfield', {
     scope: 'muni', // Only cities, villages, ( municipalities)
   })
@@ -41,9 +41,9 @@ geoholic
 Let's find cities or villages start with _Ber_ in _Germany_
 
 ```javascript
-import { geoholic } from 'geoholic';
+import { geosearch } from 'geosearch';
 
-geoholic
+geosearch
   .suggest('Ber', {
     scope: 'muni', // Only cities, villages, ( municipalities)
     country: 'de', // Only from the Czech Republic
@@ -63,9 +63,9 @@ geoholic
 Let's find position of public transport station in the Czech Republic
 
 ```javascript
-import { geoholic } from 'geoholic';
+import { geosearch } from 'geosearch';
 
-geoholic
+geosearch
   .suggest('kokořín', {
     scope: 'pubt', // Only public transport related places
     country: 'cz', // Only from the Czech Republic

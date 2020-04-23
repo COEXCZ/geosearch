@@ -1,7 +1,7 @@
-import { geoholic } from '../index';
+import { geosearch } from '../index';
 
 test('Find something', async () => {
-  const places = await geoholic.suggest('Praha', {
+  const places = await geosearch.suggest('Praha', {
     scope: 'muni',
     country: 'cz',
   });
@@ -9,7 +9,7 @@ test('Find something', async () => {
 });
 
 test('Filter municipality', async () => {
-  const places = await geoholic.suggest('Praha', {
+  const places = await geosearch.suggest('Praha', {
     scope: 'muni',
     country: 'cz',
   });
@@ -17,7 +17,7 @@ test('Filter municipality', async () => {
 });
 
 test('Non existing place', async () => {
-  const places = await geoholic.suggest('xyzqwertziuyp123čřž', {
+  const places = await geosearch.suggest('xyzqwertziuyp123čřž', {
     scope: 'muni',
     country: 'cz',
   });

@@ -1,5 +1,5 @@
 {
-  "name": "@coex/geoholic",
+  "name": "@coex/geosearch",
   "version": "0.0.7",
   "description": "Nodejs library for finding places using Mapy.cz Suggest API",
   "main": "index.js",
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/COEXCZ/geoholic.git"
+    "url": "git+https://github.com/COEXCZ/geosearch.git"
   },
   "keywords": [
     "mapycz",
@@ -33,9 +33,9 @@
   "author": "COEX (https://github.com/COEXCZ)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/COEXCZ/geoholic/issues"
+    "url": "https://github.com/COEXCZ/geosearch/issues"
   },
-  "homepage": "https://github.com/COEXCZ/geoholic#readme",
+  "homepage": "https://github.com/COEXCZ/geosearch#readme",
   "devDependencies": {
     "@types/jest": "^25.2.1",
     "@types/node": "^12.12.6",

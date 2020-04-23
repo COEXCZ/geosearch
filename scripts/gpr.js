@@ -5,7 +5,7 @@ const pkgDistPath = '../dist/package.json';
 
 const pkg = require(pkgDistPath);
 
-pkg.name = 'geoholic';
+pkg.name = 'geosearch';
 
 pkg.publishConfig = {};
 pkg.publishConfig.registry = `https://npm.pkg.github.com/@COEXCZ`;
