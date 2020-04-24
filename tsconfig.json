@@ -18,6 +18,6 @@
     "outDir": "dist",
     "resolveJsonModule": true
   },
-  "include": ["src", "demo"],
+  "include": ["src", "demo", "__tests__"],
   "exclude": ["dist/**/*", "*/__tests__/**/*"]
 }
