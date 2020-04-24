@@ -28,7 +28,9 @@ npm install @coex/geosearch
 Let's find all _Springfields_ in the World
 
 ```javascript
-import { geosearch } from 'geosearch';
+import { GeoSearch } from '@coex/geosearch';
+
+const geoSearch = new GeoSearch();
 
 geosearch
   .suggest('Springfield', {
@@ -49,7 +51,9 @@ geosearch
 Let's find cities or villages start with _Ber_ in _Germany_
 
 ```javascript
-import { geosearch } from 'geosearch';
+import { GeoSearch } from '@coex/geosearch';
+
+const geoSearch = new GeoSearch();
 
 geosearch
   .suggest('Ber', {
@@ -71,7 +75,9 @@ geosearch
 Let's find position of public transport station in the Czech Republic
 
 ```javascript
-import { geosearch } from 'geosearch';
+import { GeoSearch } from '@coex/geosearch';
+
+const geoSearch = new GeoSearch();
 
 geosearch
   .suggest('kokořín', {
@@ -161,10 +167,10 @@ yarn start
 
 ### Run example
 
-You can find and modify it in `example.ts` file
+You can find and modify it in `demo/index.ts` file
 
 ```bash
-yarn example
+yarn demo
 ```
 
 ### Run tests
@@ -187,8 +193,6 @@ Code of this library is licensed under the [MIT license].
 
 ---
 
-&copy; 2020 [Lukas Bartak](http://bartweb.cz)
-
-Proudly powered by nature 🗻, wind 💨, tea 🍵 and beer 🍺 ;)
+&copy; 2020 [COEX](https://www.coex.cz)
 
 [mit license]: LICENSE

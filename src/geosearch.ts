@@ -3,9 +3,7 @@ import { GeoSearchData, GeoSearchOptions, GeoSearchResult } from './interface/ge
 import { createError, filterData, getBounds } from './utils/utils';
 import { API_URL, COUNT } from './variables';
 
-class GeoSearch {
-  constructor() {}
-
+export class GeoSearch {
   public async suggest(query: string, options?: GeoSearchOptions): Promise<GeoSearchResult[]> {
     const bounds = await getBounds(options).catch(() => {
       throw createError('Input Error');
@@ -30,5 +28,3 @@ class GeoSearch {
     throw createError('API request failed', response);
   }
 }
-
-export const geosearch = new GeoSearch();

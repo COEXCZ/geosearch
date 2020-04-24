@@ -1,6 +1,9 @@
-import { geosearch, GeoSearchResult } from '../dist/index';
+import { GeoSearch } from '../dist/index';
+import { GeoSearchResult } from '../dist/interface';
 
-geosearch
+const geoSearch = new GeoSearch();
+
+geoSearch
   .suggest('Praha', {
     scope: 'muni',
     country: 'cz',
