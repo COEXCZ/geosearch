@@ -5,10 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "start": "tsc -w",
-    "build": "tsc && yarn syncprojects",
-    "demo": "node dist/demo",
-    "gpr:setup": "node scripts/gpr",
-    "syncprojects": " cp package.json dist/package.json && cp README.md dist/README.md",
+    "build": "tsc && ts-node scripts/dist-prepare",
+    "demo": "ts-node demo",
+    "gpr:setup": "ts-node scripts/gpr-setup",
     "test": "jest --config jestconfig.json",
     "lint": "eslint ./src/**/**/* --fix",
     "version": "",
@@ -50,6 +49,7 @@
     "prettier": "^2.0.5",
     "pretty-quick": "^2.0.1",
     "ts-jest": "^25.4.0",
+    "ts-node": "^8.9.0",
     "typescript": "^3.8.3"
   },
   "husky": {

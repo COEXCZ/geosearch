@@ -1,4 +1,4 @@
-import { geosearch, GeoSearchResult } from 'index';
+import { geosearch, GeoSearchResult } from '../dist/index';
 
 geosearch
   .suggest('Praha', {

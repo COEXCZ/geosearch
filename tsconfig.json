@@ -16,8 +16,9 @@
     "moduleResolution": "node",
     "baseUrl": "src",
     "outDir": "dist",
+    "esModuleInterop": true,
     "resolveJsonModule": true
   },
-  "include": ["src", "demo", "__tests__"],
-  "exclude": ["dist/**/*", "*/__tests__/**/*"]
+  "include": ["src"],
+  "exclude": ["dist/**/*", "*/tests/**/*"]
 }
