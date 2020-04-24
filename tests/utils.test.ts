@@ -1,4 +1,4 @@
-import { GeoSearchData } from '../dist/src/interface/geosearch.interface.js';
+import { GeoSearchData } from '../dist/interface';
 import { filterData, getBounds } from '../dist/utils/utils';
 import * as mockPrahaResult from './mocks/search-praha.json';
 

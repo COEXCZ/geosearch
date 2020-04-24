@@ -1,4 +1,6 @@
-import { geosearch } from '../dist/index';
+import { GeoSearch } from '../dist';
+
+const geosearch = new GeoSearch();
 
 test('Find something', async () => {
   const places = await geosearch.suggest('Praha', {
