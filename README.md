@@ -32,14 +32,14 @@ import { geosearch } from 'geosearch';
 
 geosearch
   .suggest('Springfield', {
-    scope: 'muni', // Only cities, villages, ( municipalities)
+    scope: 'muni', // Only cities, villages, (municipalities)
   })
   .then((places) => {
     // ... do something cool
     console.log('Results', places);
   })
   .catch((e) => {
-    // catch Error
+    // Catch Error
     console.log('Error', e);
   });
 ```
@@ -53,15 +53,15 @@ import { geosearch } from 'geosearch';
 
 geosearch
   .suggest('Ber', {
-    scope: 'muni', // Only cities, villages, ( municipalities)
-    country: 'de', // Only from the Czech Republic
+    scope: 'muni', // Only cities, villages, (municipalities)
+    country: 'de', // Only from Germany
   })
   .then((places) => {
     // ... do something cool
     console.log('Results', places);
   })
   .catch((e) => {
-    // catch Error
+    // Catch Error
     console.log('Error', e);
   });
 ```
@@ -83,7 +83,7 @@ geosearch
     console.log('Results', places);
   })
   .catch((e) => {
-    // catch Error
+    // Catch Error
     console.log('Error', e);
   });
 ```
