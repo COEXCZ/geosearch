@@ -1,4 +1,4 @@
-import { geosearch } from './index';
+import { geosearch, GeoSearchResult } from 'index';
 
 geosearch
   .suggest('Praha', {
@@ -10,7 +10,7 @@ geosearch
     //   ne: { lat: 51.0746358, lng: 18.892704 },
     // },
   })
-  .then((data) => console.log('Results async', data))
+  .then((data: GeoSearchResult[]) => console.log('Results async', data))
   .catch((e) => {
     console.log('users catch', e);
   });

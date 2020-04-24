@@ -14,10 +14,10 @@
     "strict": true,
     "target": "es2017",
     "moduleResolution": "node",
-    "rootDir": ".",
+    "baseUrl": "src",
     "outDir": "dist",
     "resolveJsonModule": true
   },
-  "include": ["**/*.ts"],
+  "include": ["src", "demo"],
   "exclude": ["dist/**/*", "*/__tests__/**/*"]
 }

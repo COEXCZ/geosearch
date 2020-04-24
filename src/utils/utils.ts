@@ -1,6 +1,11 @@
 import { AxiosError, AxiosResponse } from 'axios';
+import {
+  GeoSearchError,
+  GeoSearchErrorMessage,
+  GeoSearchOptions,
+  GeoSearchResult,
+} from '../interface/geosearch.interface';
 import { getCountryBounds } from './countries';
-import { GeoSearchError, GeoSearchErrorMessage, GeoSearchOptions, GeoSearchResult } from './geo.interface';
 
 export const getBounds = (options: GeoSearchOptions | undefined): Promise<string> => {
   return new Promise((resolve) => {

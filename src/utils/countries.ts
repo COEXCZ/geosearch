@@ -1,4 +1,4 @@
-import { GeoSearchCountries, LatLngBounds } from './geo.interface';
+import { GeoSearchCountries, LatLngBounds } from '../interface/geosearch.interface';
 
 // Country bounding boxes by https://gist.github.com/graydon/11198540
 export function getCountryBounds(country: GeoSearchCountries | undefined): LatLngBounds | null {
