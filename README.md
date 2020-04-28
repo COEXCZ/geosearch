@@ -7,6 +7,10 @@
 >
 > _Datasource: Mapy.cz Suggest API_
 
+## Demo
+
+https://stackblitz.com/edit/geosearch
+
 ## Install
 
 via yarn
@@ -32,7 +36,7 @@ import { GeoSearch } from '@coex/geosearch';
 
 const geoSearch = new GeoSearch();
 
-geosearch
+geoSearch
   .suggest('Springfield', {
     scope: 'muni', // Only cities, villages, (municipalities)
   })
@@ -55,7 +59,7 @@ import { GeoSearch } from '@coex/geosearch';
 
 const geoSearch = new GeoSearch();
 
-geosearch
+geoSearch
   .suggest('Ber', {
     scope: 'muni', // Only cities, villages, (municipalities)
     country: 'de', // Only from Germany
@@ -79,7 +83,7 @@ import { GeoSearch } from '@coex/geosearch';
 
 const geoSearch = new GeoSearch();
 
-geosearch
+geoSearch
   .suggest('kokořín', {
     scope: 'pubt', // Only public transport related places
     country: 'cz', // Only from the Czech Republic
@@ -165,7 +169,7 @@ Let's try to find **rivers, lakes, mountains, streets, national parks, areas, to
 yarn start
 ```
 
-### Run example
+### Run demo locally
 
 You can find and modify it in `demo/index.ts` file
 
