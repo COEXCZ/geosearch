@@ -2,6 +2,7 @@ import { AxiosError, AxiosResponse } from 'axios';
 import {
   GeoSearchError,
   GeoSearchErrorMessage,
+  GeoSearchLangs,
   GeoSearchOptions,
   GeoSearchResult,
 } from '../interface/geosearch.interface';
@@ -21,6 +22,14 @@ export const getBounds = (options: GeoSearchOptions | undefined): Promise<string
     }
     resolve(boundsString);
   });
+};
+
+export const getLangs = (langs: GeoSearchLangs[] | undefined): string => {
+  if (Array.isArray(langs) && langs?.length) {
+    const allLanguages = langs.join(',');
+    return `&lang=${allLanguages}`;
+  }
+  return '';
 };
 
 export const createError = (

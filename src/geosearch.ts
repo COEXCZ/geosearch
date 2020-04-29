@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { GeoSearchData, GeoSearchOptions, GeoSearchResult } from './interface/geosearch.interface';
-import { createError, filterData, getBounds } from './utils/utils';
+import { createError, filterData, getBounds, getLangs } from './utils/utils';
 import { API_URL, COUNT } from './variables';
 
 export class GeoSearch {
@@ -8,7 +8,9 @@ export class GeoSearch {
     const bounds = await getBounds(options).catch(() => {
       throw createError('Input Error');
     });
-    const apiUrl = `${API_URL}?count=${COUNT}&phrase=${encodeURIComponent(query)}${bounds}`;
+
+    const langs = getLangs(options?.langs);
+    const apiUrl = `${API_URL}?count=${COUNT}&phrase=${encodeURIComponent(query)}${bounds}${langs}`;
 
     // For debugging
     if (options?.debug) {

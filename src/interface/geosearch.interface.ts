@@ -64,7 +64,10 @@ export interface GeoSearchOptions {
   bounds?: LatLngBounds;
   country?: GeoSearchCountries;
   debug?: boolean;
+  langs?: GeoSearchLangs[];
 }
+
+export type GeoSearchLangs = 'en' | 'cs' | 'sk' | 'de' | 'es' | 'fr';
 
 export type GeoSearchErrorMessage = 'Error' | 'Network Error' | 'Input Error' | 'API request failed';
 

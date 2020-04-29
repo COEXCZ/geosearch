@@ -8,6 +8,7 @@ geoSearch
     scope: 'muni',
     country: 'cz',
     debug: true,
+    langs: ['en', 'cs'],
     // bounds: {
     //   sw: { lat: 48.5370786, lng: 12.0921668 },
     //   ne: { lat: 51.0746358, lng: 18.892704 },
