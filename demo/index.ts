@@ -1,5 +1,5 @@
 import { GeoSearch } from '../dist/index';
-import { GeoSearchResult } from '../dist/interface';
+import { GeoSearchResult, GeoSearchUserData } from '../dist/interface';
 
 const geoSearch = new GeoSearch();
 
@@ -13,7 +13,9 @@ geoSearch
     //   ne: { lat: 51.0746358, lng: 18.892704 },
     // },
   })
-  .then((data: GeoSearchResult[]) => console.log('Results async', data))
+  .then((places: GeoSearchResult[]) => places.map((place) => place.userData))
+  .then((filtered: GeoSearchUserData[]) => console.log('Results async', filtered))
   .catch((e) => {
-    console.log('users catch', e);
+    // Catch Error
+    console.error('Error', e);
   });
