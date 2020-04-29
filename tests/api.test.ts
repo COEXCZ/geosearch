@@ -15,7 +15,7 @@ test('Filter municipality', async () => {
     scope: 'muni',
     country: 'cz',
   });
-  expect(places[0].category).toBe('municipality_cz');
+  expect(places[0].source).toBe('muni');
 });
 
 test('Non existing place', async () => {
