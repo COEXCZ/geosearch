@@ -1,9 +1,9 @@
 import { GeoSearch } from '../dist';
 
-const geosearch = new GeoSearch();
+const geoSearch = new GeoSearch();
 
 test('Find something', async () => {
-  const places = await geosearch.suggest('Praha', {
+  const places = await geoSearch.suggest('Praha', {
     scope: 'muni',
     country: 'cz',
   });
@@ -11,7 +11,7 @@ test('Find something', async () => {
 });
 
 test('Filter municipality', async () => {
-  const places = await geosearch.suggest('Praha', {
+  const places = await geoSearch.suggest('Praha', {
     scope: 'muni',
     country: 'cz',
   });
@@ -19,7 +19,7 @@ test('Filter municipality', async () => {
 });
 
 test('Non existing place', async () => {
-  const places = await geosearch.suggest('xyzqwertziuyp123čřž', {
+  const places = await geoSearch.suggest('xyzqwertziuyp123čřž', {
     scope: 'muni',
     country: 'cz',
   });

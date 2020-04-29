@@ -46,7 +46,7 @@ export function filterData(data: GeoSearchResult[], options: GeoSearchOptions | 
     // Filter category by scope
     places = places.filter((item) => String(item.category).includes(String(options.scope)));
 
-    // Special conditions for Czech Republic
+    // Special conditions for the Czech Republic
     if (options?.country === 'cz') {
       places = places.filter((item) => item.userData.source === options.scope);
     }

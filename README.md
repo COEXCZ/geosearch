@@ -46,7 +46,7 @@ geoSearch
   })
   .catch((e) => {
     // Catch Error
-    console.log('Error', e);
+    console.error('Error', e);
   });
 ```
 
@@ -70,7 +70,7 @@ geoSearch
   })
   .catch((e) => {
     // Catch Error
-    console.log('Error', e);
+    console.error('Error', e);
   });
 ```
 
@@ -94,7 +94,7 @@ geoSearch
   })
   .catch((e) => {
     // Catch Error
-    console.log('Error', e);
+    console.error('Error', e);
   });
 ```
 
