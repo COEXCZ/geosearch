@@ -1,4 +1,4 @@
-import { GeoSearch } from '../dist';
+import { GeoSearch } from '../src';
 
 const geoSearch = new GeoSearch();
 

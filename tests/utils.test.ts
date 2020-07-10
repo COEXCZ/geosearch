@@ -1,5 +1,5 @@
-import { GeoSearchData } from '../dist/interface';
-import { filterData, getBounds } from '../dist/utils/utils';
+import { GeoSearchData } from '../src/interface';
+import { filterData, getBounds } from '../src/utils/utils';
 import * as mockPrahaResult from './mocks/search-praha.json';
 
 test('Get right bounds from country', async () => {
