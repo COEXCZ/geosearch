@@ -1,5 +1,6 @@
-import { GeoSearchData } from '../src/interface';
-import { filterData, getBounds } from '../src/utils/utils';
+import { GeoSearchData, GeoSearchError } from '../src/interface';
+import { createError, filterData, getBounds, isGeoSearchError } from '../src/utils/utils';
+import { axiosErrorMock, axiosResponseMock, GeoSearchErrorMock } from './mocks/mockdata';
 import * as mockPrahaResult from './mocks/search-praha.json';
 
 test('Get right bounds from country', async () => {
@@ -42,4 +43,24 @@ test('Filter czech municipality', () => {
   const countAllFiltered = filteredData.length;
 
   expect(countMuni).toEqual(countAllFiltered);
+});
+
+test('Create error', () => {
+  const message = 'Error';
+
+  const error = new Error(message) as GeoSearchError;
+  error.name = 'GeoSearchError';
+  error.isGeoSearchError = true;
+  error.axiosError = axiosErrorMock;
+  error.axiosResponse = axiosResponseMock;
+
+  const errorData = createError(message, axiosResponseMock, axiosErrorMock);
+
+  expect(errorData).toEqual(errorData);
+});
+
+test('isGeoSearchError', () => {
+  const isGeoError = isGeoSearchError(GeoSearchErrorMock);
+
+  expect(isGeoError).toEqual(true);
 });

@@ -3,7 +3,7 @@
 
 # GeoSearch
 
-> Simple nodejs library to find places all around the world
+> Simple npm library to find places all around the world
 >
 > _Datasource: Mapy.cz Suggest API_
 
