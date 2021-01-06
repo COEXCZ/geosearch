@@ -197,6 +197,6 @@ Code of this library is licensed under the [MIT license].
 
 ---
 
-&copy; 2020 [COEX](https://www.coex.cz)
+&copy; 2021 [COEX](https://www.coex.cz)
 
 [mit license]: LICENSE
