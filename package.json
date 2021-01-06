@@ -17,7 +17,7 @@
     "release:major": "git checkout master && npm version major -m \"chore(update): major release %s 💥 \""
   },
   "dependencies": {
-    "axios": "^0.19.2"
+    "axios": "^0.21.1"
   },
   "repository": {
     "type": "git",
