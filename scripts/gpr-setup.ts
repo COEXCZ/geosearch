@@ -3,7 +3,7 @@ import { join } from 'path';
 import distPackage from '../dist/package.json';
 
 // Modify package.json in dist folder
-let pkg: Record<string, any> = distPackage;
+const pkg: Record<string, any> = distPackage;
 
 pkg.publishConfig = {};
 pkg.name = '@COEXCZ/geosearch';
