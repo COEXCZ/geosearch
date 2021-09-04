@@ -13,6 +13,8 @@ export function getCountryBounds(country: GeoSearchCountries | undefined): LatLn
       return { sw: { lat: 18.91619, lng: -171.791110603 }, ne: { lat: 71.3577635769, lng: -66.96466 } };
     case 'gb':
       return { sw: { lat: 49.959999905, lng: -7.57216793459 }, ne: { lat: 58.6350001085, lng: 1.68153079591 } };
+    case 'jp':
+      return { sw: { lat: 20.2531, lng: 122.5557 }, ne: { lat: 45.3326, lng: 153.5912 } };
     default:
       return null;
   }
