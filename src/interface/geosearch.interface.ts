@@ -76,6 +76,6 @@ export interface GeoSearchError extends Error {
   axiosResponse?: AxiosResponse;
 }
 
-export type GeoSearchCountries = 'cz' | 'sk' | 'de' | 'us' | 'gb';
+export type GeoSearchCountries = 'cz' | 'sk' | 'de' | 'us' | 'gb' | 'jp';
 
 export type GeoSearchScope = 'muni' | 'area' | 'pubt' | 'street';
