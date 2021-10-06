@@ -154,12 +154,13 @@ Let's try to find **rivers, lakes, mountains, streets, national parks, areas, to
 
 ## Options
 
-| Option      | Type                                                     | Default | Description                                                                                     |
-| ----------- | -------------------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------- |
-| **scope**   | `'muni'` \| `'area'` \| `'pubt'` \| `'street'`           | null    | Preferred category of results                                                                   |
-| **bounds**  | `{ sw: LatLng, ne: LatLng}`                              | null    | Preffered country boundaries                                                                    |
-| **country** | `'cz'` \| `'sk'` \| `'us'` \| `'de'` \| `'gb'` \| `'jp'` | null    | Preferred country. Same as bounds but with some presets. Feel free to add more via pull request |
-| **debug**   | boolean                                                  | false   | Print additional information to console                                                         |
+| Option      | Type                                                                         | Default | Description                                                                                     |
+| ----------- | ---------------------------------------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------- |
+| **scope**   | `'muni'` \| `'area'` \| `'pubt'` \| `'street'`                               | null    | Preferred category of results                                                                   |
+| **bounds**  | `{ sw: LatLng, ne: LatLng}`                                                  | null    | Preffered country boundaries                                                                    |
+| **country** | `'cz'` \| `'sk'` \| `'us'` \| `'de'` \| `'gb'` \| `'jp'`                     | null    | Preferred country. Same as bounds but with some presets. Feel free to add more via pull request |
+| **lang**    | `'en'` \| `'cs'` \| `'de'` \| `'pl'` \| `'sk'` \| `'ru'` \| `'es'` \| `'fr'` | `cs`    | Preferred language                                                                              |
+| **debug**   | boolean                                                                      | false   | Print additional information to console                                                         |
 
 ## Development
 
