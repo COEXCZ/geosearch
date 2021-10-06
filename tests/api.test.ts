@@ -29,7 +29,7 @@ test('Non existing place', async () => {
 test('Show result in German', async () => {
   const places = await geoSearch.suggest('Kyoto tower', {
     country: 'jp',
-    lang: 'de'
+    lang: 'de',
   });
   expect(places[0].userData.suggestSecondRow).toBe('Touristenattraktion, Kyōto - Shimogyō-ku, Japan');
 });

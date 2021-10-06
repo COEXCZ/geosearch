@@ -64,7 +64,7 @@ export interface GeoSearchOptions {
   bounds?: LatLngBounds;
   country?: GeoSearchCountries;
   debug?: boolean;
-  lang?: "en" | "cs" | "de" | "pl" | "sk" | "ru" | "es" | "fr";
+  lang?: 'en' | 'cs' | 'de' | 'pl' | 'sk' | 'ru' | 'es' | 'fr';
 }
 
 export type GeoSearchErrorMessage = 'Error' | 'Network Error' | 'Input Error' | 'API request failed';
@@ -74,7 +74,7 @@ export interface GeoSearchError extends Error {
   isGeoSearchError: boolean;
   message: GeoSearchErrorMessage;
   axiosError?: AxiosError;
-  axiosResponse?: AxiosResponse;
+  axiosResponse?: AxiosResponse<GeoSearchData>;
 }
 
 export type GeoSearchCountries = 'cz' | 'sk' | 'de' | 'us' | 'gb' | 'jp';

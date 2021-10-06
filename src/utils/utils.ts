@@ -1,5 +1,6 @@
 import { AxiosError, AxiosResponse } from 'axios';
 import {
+  GeoSearchData,
   GeoSearchError,
   GeoSearchErrorMessage,
   GeoSearchOptions,
@@ -25,7 +26,7 @@ export const getBounds = (options: GeoSearchOptions | undefined): Promise<string
 
 export const createError = (
   message: GeoSearchErrorMessage,
-  axiosResponse?: AxiosResponse<any>,
+  axiosResponse?: AxiosResponse<GeoSearchData>,
   axiosError?: AxiosError
 ): GeoSearchError => {
   const error = new Error(message) as GeoSearchError;
