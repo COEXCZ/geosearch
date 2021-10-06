@@ -8,7 +8,7 @@ export class GeoSearch {
     const bounds = await getBounds(options).catch(() => {
       throw createError('Input Error');
     });
-    const apiUrl = `${API_URL}?count=${COUNT}&phrase=${encodeURIComponent(query)}${bounds}`;
+    const apiUrl = `${API_URL}?count=${COUNT}&lang=${options?.lang}&phrase=${encodeURIComponent(query)}${bounds}`;
 
     // For debugging
     if (options?.debug) {
