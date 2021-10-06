@@ -25,3 +25,11 @@ test('Non existing place', async () => {
   });
   expect(places.length).toBe(0);
 });
+
+test('Show result in German', async () => {
+  const places = await geoSearch.suggest('Kyoto tower', {
+    country: 'jp',
+    lang: 'de'
+  });
+  expect(places[0].userData.suggestSecondRow).toBe('Touristenattraktion, Kyōto - Shimogyō-ku, Japan');
+});
