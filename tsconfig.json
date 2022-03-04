@@ -3,6 +3,7 @@
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "declaration": true,
+    "declarationDir": "./dist/types",
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "lib": ["es2016"],

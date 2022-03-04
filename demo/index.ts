@@ -1,5 +1,5 @@
-import { GeoSearch } from '../dist/index';
-import { GeoSearchResult, GeoSearchUserData } from '../dist/interface';
+import { GeoSearch } from '../dist/esm/index';
+import { GeoSearchResult, GeoSearchUserData } from '../dist/types';
 
 const geoSearch = new GeoSearch();
 
