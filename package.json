@@ -1,6 +1,6 @@
 {
   "name": "@coex/geosearch",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Nodejs library for finding places using Mapy.cz Suggest API",
   "scripts": {
     "start": "tsc -w",
@@ -11,7 +11,7 @@
     "fix-paths": "yarn json -I -f ./dist/package.json -e \"this.module='./esm/index.js';this.main='./cjs/index.js';this.types='./types/index.ts'\"",
     "compat": "mkdir ./dist/interface/ && cp ./compat/index.ts ./dist/interface/index.ts",
     "demo": "ts-node demo",
-    "gpr:setup": "ts-node scripts/gpr-setup",
+    "gpr:setup": "node --experimental-json-modules ./scripts/gpr-setup.mjs",
     "test": "jest --config jestconfig.json",
     "lint": "eslint ./src/**/**/* --fix",
     "postversion": "git push && git push --follow-tags",

@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@master
-      - name: Use Node.js 14.x
+      - name: Use Node.js 16.x
         uses: actions/setup-node@master
         with:
-          node-version: 14.x
+          node-version: 16.x
           registry-url: 'https://registry.npmjs.org'
 
       - name: Cache node modules
@@ -39,33 +39,33 @@ jobs:
       # BETA
       - name: Publish NPM BETA
         if: startsWith(github.ref, 'refs/tags/v') && contains(github.ref, 'beta') == true
-        run: npm publish --folder dist --access public --tag beta
+        run: cd dist && npm publish --access public --tag beta
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
       # PROD
       - name: Publish NPM
         if: startsWith(github.ref, 'refs/tags/v') && contains(github.ref, 'beta') == false
-        run: npm publish --folder dist --access public
+        run: cd dist && npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
-      - name: Set up package for GPR
-        if: startsWith(github.ref, 'refs/tags/v') && contains(github.ref, 'beta') == false
-        run: yarn gpr:setup
+      # - name: Set up package for GPR
+      #   if: startsWith(github.ref, 'refs/tags/v') && contains(github.ref, 'beta') == false
+      #   run: yarn gpr:setup
 
-      - name: Use GPR
-        if: startsWith(github.ref, 'refs/tags/v') && contains(github.ref, 'beta') == false
-        uses: actions/setup-node@master
-        with:
-          node-version: 14
-          registry-url: https://npm.pkg.github.com/
-          scope: '@COEXCZ'
+      # - name: Use GPR
+      #   if: startsWith(github.ref, 'refs/tags/v') && contains(github.ref, 'beta') == false
+      #   uses: actions/setup-node@master
+      #   with:
+      #     node-version: 16
+      #     registry-url: https://npm.pkg.github.com/
+      #     scope: '@COEXCZ'
 
-      - name: Publish to GitHub Package Registry
-        if: startsWith(github.ref, 'refs/tags/v') && contains(github.ref, 'beta') == false
-        run: |
-          cd dist
-          npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{github.token}}
+      # - name: Publish to GitHub Package Registry
+      #   if: startsWith(github.ref, 'refs/tags/v') && contains(github.ref, 'beta') == false
+      #   run: |
+      #     cd dist
+      #     npm publish
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{github.token}}
