@@ -11,7 +11,7 @@
     "fix-paths": "yarn json -I -f ./dist/package.json -e \"this.module='./esm/index.js';this.main='./cjs/index.js';this.types='./types/index.ts'\"",
     "compat": "mkdir ./dist/interface/ && cp ./compat/index.ts ./dist/interface/index.ts",
     "demo": "ts-node demo",
-    "gpr:setup": "ts-node -p tsconfig-cjs.json scripts/gpr-setup",
+    "gpr:setup": "node --experimental-json-modules ./scripts/gpr-setup.mjs",
     "test": "jest --config jestconfig.json",
     "lint": "eslint ./src/**/**/* --fix",
     "postversion": "git push && git push --follow-tags",
