@@ -3,7 +3,15 @@
 
 # GeoSearch
 
-> Simple nodejs library to find places all around the world
+> Simple JavaScript library to find places all around the world
+>
+> ✓ TypeScript / JavaScript
+>
+> ✓ ESM
+>
+> ✓ CommonJS
+>
+> ✓ Node.js
 >
 > _Datasource: Mapy.cz Suggest API_
 
@@ -13,16 +21,9 @@ https://stackblitz.com/edit/geosearch
 
 ## Install
 
-via yarn
-
-```bash
-yarn add @coex/geosearch
-```
-
-via npm
-
 ```bash
 npm install @coex/geosearch
+# yarn add @coex/geosearch
 ```
 
 ## Usage
@@ -152,7 +153,7 @@ Let's try to find **rivers, lakes, mountains, streets, national parks, areas, to
 ];
 ```
 
-## Options
+## ⚙️ Options
 
 | Option      | Type                                                                         | Default | Description                                                                                     |
 | ----------- | ---------------------------------------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------- |
@@ -162,7 +163,7 @@ Let's try to find **rivers, lakes, mountains, streets, national parks, areas, to
 | **lang**    | `'en'` \| `'cs'` \| `'de'` \| `'pl'` \| `'sk'` \| `'ru'` \| `'es'` \| `'fr'` | `cs`    | Preferred language                                                                              |
 | **debug**   | boolean                                                                      | false   | Print additional information to console                                                         |
 
-## Development
+## 🤝 Development
 
 ### Developing and debugging library
 
@@ -184,7 +185,7 @@ yarn demo
 yarn test
 ```
 
-## License
+## 📝 License
 
 ### Data source
 
@@ -198,6 +199,6 @@ Code of this library is licensed under the [MIT license].
 
 ---
 
-&copy; 2021 [COEX](https://www.coex.cz)
+&copy; 2022 [COex](https://www.coex.cz)
 
 [mit license]: LICENSE
