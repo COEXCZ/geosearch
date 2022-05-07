@@ -31,5 +31,13 @@ test('Show result in Czech', async () => {
     country: 'jp',
     lang: 'cs',
   });
-  expect(places[0].userData.suggestSecondRow).toBe('Věžová stavba, Kjóto - Shimogyō-ku, Japonsko');
+  expect(places[0].userData.suggestSecondRow).toContain('Kjóto - Shimogyō-ku, Japonsko');
+});
+
+test('Show result in jp', async () => {
+  const places = await geoSearch.suggest('Kyoto tower', {
+    country: 'jp',
+    lang: 'en',
+  });
+  expect(places[0].userData.suggestSecondRow).toContain('Kyoto - Shimogyō-ku, Japan');
 });
