@@ -79,4 +79,4 @@ export interface GeoSearchError extends Error {
 
 export type GeoSearchCountries = 'cz' | 'sk' | 'de' | 'us' | 'gb' | 'jp';
 
-export type GeoSearchScope = 'muni' | 'area' | 'pubt' | 'street';
+export type GeoSearchScope = 'muni' | 'area' | 'pubt' | 'street' | '';
